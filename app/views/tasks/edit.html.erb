@@ -1,0 +1,26 @@
+<h1>Vous éditez la tache <%= @task.title %></h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-4 col-offset-4">
+      <h1>Ajouter une nouvelle task</h1>
+      <form action="/tasks" method="patch">
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+        <div class="form-group">
+          <label for="">Title</label>
+          <input type="text"  name="task[title]" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="">Details</label>
+          <input type="text" class="form-control" name="task[details]">
+        </div>
+        <div class="form-checkbox">
+          <label for="">DO?</label>
+          <input type="checkbox" name="" class="form-control" name="task[completed]" id="">
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+

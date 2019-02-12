@@ -1,0 +1,4 @@
+<h2>Task <%= @task.title %></h2>
+<h3>Description <%= @task.details %></h3>
+<h4>Complete : <%= @task.completed ? "[X]" : "[ ]" %></h4>
+<h5> <%= link_to "Editer la task", edit_task_path(params[:id]) %></h5>

@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-4 col-offset-4">
+      <h1>Ajouter une nouvelle task</h1>
+      <form action="/tasks" method="post">
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+        <div class="form-group">
+          <label for="">Title</label>
+          <input type="text"  name="task[title]" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="">Details</label>
+          <input type="text" class="form-control" name="task[details]">
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+
